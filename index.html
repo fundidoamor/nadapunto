@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-
 <body>
 
   <!-- ========================================
@@ -34,6 +33,7 @@
     >
       <a href="#archivo">/archivo</a>
       <a href="#merch">/merch</a>
+      <a href="#ep-1992">/música</a>
       <a href="#proyectos">/proyectos</a>
       <a href="#info">/info</a>
     </nav>
@@ -53,7 +53,7 @@
       <div class="hero-copy">
 
         <p class="eyebrow">
-          archivo / objetos / imágenes / música
+          archivo / gráfica / objetos / música
         </p>
 
         <h1>
@@ -170,7 +170,7 @@
 
         <a
           class="project-row"
-          href="#proyectos"
+          href="#ep-1992"
           data-preview="preview-4"
         >
 
@@ -188,7 +188,6 @@
 
         </a>
 
-
       </div>
 
 
@@ -202,7 +201,7 @@
       >
 
 
-        <!-- 001 — VIDEO -->
+        <!-- 001 -->
 
         <div
           class="preview-placeholder preview-media"
@@ -222,7 +221,7 @@
         </div>
 
 
-        <!-- 002 — GRÁFICA -->
+        <!-- 002 -->
 
         <div
           class="preview-placeholder preview-media preview-image-container"
@@ -238,7 +237,7 @@
         </div>
 
 
-        <!-- 003 — TEE 01 -->
+        <!-- 003 -->
 
         <div
           class="preview-placeholder preview-media preview-image-container"
@@ -254,15 +253,20 @@
         </div>
 
 
-        <!-- 004 — 1992 -->
+        <!-- 004 -->
 
         <div
-          class="preview-placeholder"
+          class="preview-placeholder preview-media preview-image-container"
           id="preview-4"
         >
-          1992
-        </div>
 
+          <img
+            class="preview-image preview-cover"
+            src="1992-cover.jpg"
+            alt=""
+          />
+
+        </div>
 
       </div>
 
@@ -373,8 +377,6 @@
         <div class="graphic-series">
 
 
-          <!-- MUJER + MANDRIL -->
-
           <figure class="graphic-item graphic-woman">
 
             <img
@@ -385,8 +387,6 @@
 
           </figure>
 
-
-          <!-- MUJER + TIBURÓN -->
 
           <figure class="graphic-item graphic-woman">
 
@@ -399,8 +399,6 @@
           </figure>
 
 
-          <!-- MUJER + TIGRE -->
-
           <figure class="graphic-item graphic-woman">
 
             <img
@@ -412,8 +410,6 @@
           </figure>
 
 
-          <!-- TIGRE / CORAZÓN -->
-
           <figure class="graphic-item graphic-heart">
 
             <img
@@ -424,8 +420,6 @@
 
           </figure>
 
-
-          <!-- DRAGÓN / CORAZÓN -->
 
           <figure class="graphic-item graphic-heart">
 
@@ -446,7 +440,7 @@
 
 
     <!-- ========================================
-         MERCH
+         MERCH — 003
     ========================================= -->
 
     <section
@@ -483,15 +477,19 @@
         <div class="product-info">
 
           <span class="product-code">
-            NP-001
+            003 / NP-001
           </span>
 
           <h3>
-            NADA PUNTO COM — TEE 01
+            TEE 01
           </h3>
 
           <p>
-            $___ MXN
+            NADA PUNTO COM
+          </p>
+
+          <p>
+            $ 380 MXN
           </p>
 
           <p>
@@ -506,6 +504,201 @@
           >
             PEDIR / CONSULTAR ↗
           </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================
+         004 — 1992
+    ========================================= -->
+
+    <section
+      id="ep-1992"
+      class="content-section music-section"
+    >
+
+      <div class="section-heading">
+
+        <h2>
+          /MÚSICA
+        </h2>
+
+        <span>
+          EP / 2026
+        </span>
+
+      </div>
+
+
+      <div class="release">
+
+
+        <!-- PORTADA -->
+
+        <div class="release-cover">
+
+          <img
+            src="1992-cover.jpg"
+            alt="Portada del EP 1992 de Amor Fundido"
+            loading="lazy"
+          />
+
+        </div>
+
+
+        <!-- INFORMACIÓN -->
+
+        <div class="release-info">
+
+          <span class="archive-number">
+            004
+          </span>
+
+          <h3>
+            1992
+          </h3>
+
+          <p class="release-artist">
+            AMOR FUNDIDO
+          </p>
+
+          <div class="release-meta">
+            <span>EP</span>
+            <span>2026</span>
+            <span>4 TRACKS</span>
+          </div>
+
+
+          <!-- TRACKLIST -->
+
+          <div class="tracklist">
+
+
+            <!-- 01 -->
+
+            <div class="track-row">
+
+              <span class="track-number">
+                01
+              </span>
+
+              <span class="track-title">
+                VERACRUZ
+              </span>
+
+              <button
+                class="track-play"
+                type="button"
+                data-audio="audio-1992-01"
+                aria-label="Reproducir Veracruz"
+              >
+                PLAY
+              </button>
+
+              <audio
+                id="audio-1992-01"
+                src="1992-01-veracruz.mp3"
+                preload="metadata"
+              ></audio>
+
+            </div>
+
+
+            <!-- 02 -->
+
+            <div class="track-row">
+
+              <span class="track-number">
+                02
+              </span>
+
+              <span class="track-title">
+                VIEJO
+              </span>
+
+              <button
+                class="track-play"
+                type="button"
+                data-audio="audio-1992-02"
+                aria-label="Reproducir Viejo"
+              >
+                PLAY
+              </button>
+
+              <audio
+                id="audio-1992-02"
+                src="1992-02-viejo.mp3"
+                preload="metadata"
+              ></audio>
+
+            </div>
+
+
+            <!-- 03 -->
+
+            <div class="track-row">
+
+              <span class="track-number">
+                03
+              </span>
+
+              <span class="track-title">
+                GORDO PANZÓN
+              </span>
+
+              <button
+                class="track-play"
+                type="button"
+                data-audio="audio-1992-03"
+                aria-label="Reproducir Gordo Panzón"
+              >
+                PLAY
+              </button>
+
+              <audio
+                id="audio-1992-03"
+                src="1992-03-gordo-panzon.mp3"
+                preload="metadata"
+              ></audio>
+
+            </div>
+
+
+            <!-- 04 -->
+
+            <div class="track-row">
+
+              <span class="track-number">
+                04
+              </span>
+
+              <span class="track-title">
+                CABALLO
+              </span>
+
+              <button
+                class="track-play"
+                type="button"
+                data-audio="audio-1992-04"
+                aria-label="Reproducir Caballo"
+              >
+                PLAY
+              </button>
+
+              <audio
+                id="audio-1992-04"
+                src="1992-04-caballo.mp3"
+                preload="metadata"
+              ></audio>
+
+            </div>
+
+
+          </div>
 
         </div>
 
@@ -539,10 +732,8 @@
       <div class="project-links">
 
 
-        <!-- AMOR FUNDIDO -->
-
         <a
-          href="#"
+          href="#archivo"
           class="project-link"
         >
 
@@ -561,10 +752,8 @@
         </a>
 
 
-        <!-- 1992 -->
-
         <a
-          href="#"
+          href="#ep-1992"
           class="project-link"
         >
 
@@ -582,8 +771,6 @@
 
         </a>
 
-
-        <!-- VISUALES -->
 
         <a
           href="#"
@@ -665,7 +852,6 @@
       </div>
 
     </section>
-
 
   </main>
 
