@@ -43,6 +43,15 @@ video {
   max-width: 100%;
 }
 
+button {
+  font: inherit;
+}
+
+section[id],
+article[id] {
+  scroll-margin-top: 90px;
+}
+
 
 /* ========================================
    HEADER
@@ -282,7 +291,7 @@ footer {
 
 
 /* ========================================
-   PREVIEW CUADRADO DEL ÍNDICE
+   PREVIEW CUADRADO
 ======================================== */
 
 .preview-panel {
@@ -323,9 +332,7 @@ footer {
   width: 100%;
   height: 100%;
 
-  border:
-    1px solid
-    var(--text);
+  border: 1px solid var(--text);
 
   background: var(--text);
   color: var(--bg);
@@ -352,7 +359,7 @@ footer {
 }
 
 
-/* Video del preview */
+/* VIDEO PREVIEW */
 
 .preview-video {
   width: 100%;
@@ -365,7 +372,7 @@ footer {
 }
 
 
-/* Imagen del preview */
+/* IMAGEN PREVIEW */
 
 .preview-image-container {
   background: #ffffff;
@@ -382,6 +389,10 @@ footer {
   background: #ffffff;
 }
 
+.preview-cover {
+  object-fit: cover;
+}
+
 
 /* ========================================
    ARCHIVO
@@ -396,10 +407,6 @@ footer {
   border-top:
     1px solid
     var(--line);
-}
-
-.archive-entry:first-of-type {
-  margin-top: 0;
 }
 
 
@@ -499,13 +506,11 @@ footer {
 }
 
 .graphic-woman {
-  grid-column:
-    span 2;
+  grid-column: span 2;
 }
 
 .graphic-heart {
-  grid-column:
-    span 3;
+  grid-column: span 3;
 }
 
 .graphic-item img {
@@ -534,25 +539,17 @@ footer {
   align-items: start;
 }
 
-
-/* Imagen real de TEE 01 */
-
 .product-image {
   width: 100%;
 
   min-height: 55vh;
 
-  border:
-    1px solid
-    var(--text);
+  border: 1px solid var(--text);
 
   overflow: hidden;
 
   background: #000000;
 }
-
-
-/* Mockup */
 
 .product-photo {
   aspect-ratio: 1 / 1;
@@ -570,23 +567,21 @@ footer {
   background: #000000;
 }
 
-
-/* Información de producto */
-
 .product-info {
   position: sticky;
+
   top: 90px;
 }
 
 .product-info h3 {
   font-size:
     clamp(
-      28px,
-      4vw,
-      62px
+      36px,
+      5vw,
+      72px
     );
 
-  line-height: 0.95;
+  line-height: 0.92;
 
   letter-spacing: -0.05em;
 
@@ -614,6 +609,183 @@ footer {
     monospace;
 
   font-size: 13px;
+}
+
+
+/* ========================================
+   1992 — MÚSICA
+======================================== */
+
+.release {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.1fr)
+    minmax(320px, 0.9fr);
+
+  gap: 50px;
+
+  align-items: start;
+}
+
+.release-cover {
+  width: 100%;
+}
+
+.release-cover img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+}
+
+.release-info {
+  position: sticky;
+
+  top: 90px;
+}
+
+.release-info h3 {
+  margin:
+    8px
+    0
+    6px;
+
+  font-size:
+    clamp(
+      72px,
+      10vw,
+      150px
+    );
+
+  line-height: 0.82;
+
+  letter-spacing: -0.07em;
+}
+
+.release-artist {
+  margin:
+    0
+    0
+    24px;
+
+  font-size:
+    clamp(
+      20px,
+      2.5vw,
+      36px
+    );
+
+  letter-spacing: -0.03em;
+}
+
+.release-meta {
+  display: flex;
+
+  gap: 18px;
+
+  margin-bottom: 46px;
+
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    monospace;
+
+  font-size: 12px;
+
+  color: var(--muted);
+}
+
+
+/* ========================================
+   TRACKLIST
+======================================== */
+
+.tracklist {
+  border-top:
+    1px solid
+    var(--line);
+}
+
+.track-row {
+  display: grid;
+
+  grid-template-columns:
+    42px
+    1fr
+    auto;
+
+  align-items: center;
+
+  gap: 16px;
+
+  min-height: 68px;
+
+  border-bottom:
+    1px solid
+    var(--line);
+}
+
+.track-number {
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    monospace;
+
+  font-size: 12px;
+
+  color: var(--muted);
+}
+
+.track-title {
+  font-size:
+    clamp(
+      20px,
+      2.1vw,
+      32px
+    );
+
+  letter-spacing: -0.03em;
+}
+
+.track-play {
+  border: 0;
+
+  padding:
+    10px
+    0
+    10px
+    20px;
+
+  background: transparent;
+
+  color: var(--text);
+
+  cursor: pointer;
+
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    monospace;
+
+  font-size: 12px;
+}
+
+.track-play:hover {
+  text-decoration: underline;
+}
+
+.track-row.is-playing .track-title {
+  font-style: italic;
 }
 
 
@@ -745,6 +917,22 @@ footer {
 
 
 /* ========================================
+   PANTALLAS MEDIAS
+======================================== */
+
+@media (max-width: 1100px) {
+
+  .preview-panel {
+    width: 220px;
+    height: 220px;
+
+    right: 24px;
+  }
+
+}
+
+
+/* ========================================
    TABLET / MÓVIL
 ======================================== */
 
@@ -797,18 +985,17 @@ footer {
   }
 
 
-  /* Desactivar previews flotantes */
+  /* SIN HOVER EN MÓVIL */
 
   .preview-panel {
     display: none;
   }
 
 
-  /* Trazo tras trazo */
+  /* TRAZO */
 
   .archive-entry-video {
-    grid-template-columns:
-      1fr;
+    grid-template-columns: 1fr;
 
     gap: 24px;
   }
@@ -818,7 +1005,7 @@ footer {
   }
 
 
-  /* Gráfica 01 */
+  /* GRÁFICA */
 
   .graphic-series {
     grid-template-columns:
@@ -841,19 +1028,14 @@ footer {
   }
 
 
-  /* Merch */
+  /* MERCH */
 
   .product {
-    grid-template-columns:
-      1fr;
+    grid-template-columns: 1fr;
   }
 
   .product-image {
     min-height: auto;
-  }
-
-  .product-photo {
-    aspect-ratio: 1 / 1;
   }
 
   .product-info {
@@ -861,7 +1043,29 @@ footer {
   }
 
 
-  /* Info */
+  /* 1992 */
+
+  .release {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .release-info {
+    position: static;
+  }
+
+  .release-info h3 {
+    font-size:
+      clamp(
+        70px,
+        24vw,
+        130px
+      );
+  }
+
+
+  /* INFO */
 
   .info-copy {
     font-size:
@@ -895,29 +1099,36 @@ footer {
   }
 
 
-  /* Gráfica */
+  /* GRÁFICA */
 
   .graphic-series {
-    grid-template-columns:
-      1fr;
+    grid-template-columns: 1fr;
   }
 
   .graphic-woman,
   .graphic-woman:first-child,
   .graphic-heart {
-    grid-column:
-      1;
+    grid-column: 1;
   }
 
 
-  /* Merch */
+  /* TRACKLIST */
 
-  .product {
-    gap: 20px;
+  .track-row {
+    grid-template-columns:
+      30px
+      1fr
+      auto;
+
+    gap: 10px;
   }
 
-  .product-photo {
-    aspect-ratio: 1 / 1;
+  .track-title {
+    font-size: 20px;
+  }
+
+  .track-play {
+    padding-left: 10px;
   }
 
 }
