@@ -8,7 +8,7 @@
 
 :root {
   --bg: #f3f0e8;
-  --text: #111;
+  --text: #111111;
   --muted: #6f6d67;
   --line: #b8b4aa;
   --max: 1500px;
@@ -68,12 +68,11 @@ video {
 
 .brand {
   font-weight: 700;
-  letter-spacing: -.02em;
+  letter-spacing: -0.02em;
 }
 
 .main-nav {
   display: flex;
-
   gap: 20px;
 
   font-family:
@@ -95,7 +94,7 @@ video {
 
 
 /* ========================================
-   CONTENEDOR
+   CONTENEDOR GENERAL
 ======================================== */
 
 main,
@@ -125,10 +124,7 @@ footer {
 }
 
 .eyebrow {
-  margin:
-    0
-    0
-    28px;
+  margin: 0 0 28px;
 
   font-family:
     ui-monospace,
@@ -153,9 +149,9 @@ footer {
       220px
     );
 
-  line-height: .78;
+  line-height: 0.78;
 
-  letter-spacing: -.075em;
+  letter-spacing: -0.075em;
 
   font-weight: 700;
 }
@@ -241,7 +237,8 @@ footer {
   padding: 22px 0;
 
   border-bottom:
-    1px solid var(--line);
+    1px solid
+    var(--line);
 
   transition:
     padding-left
@@ -280,7 +277,7 @@ footer {
       62px
     );
 
-  letter-spacing: -.04em;
+  letter-spacing: -0.04em;
 }
 
 
@@ -342,7 +339,7 @@ footer {
 
   font-size: 28px;
 
-  letter-spacing: -.04em;
+  letter-spacing: -0.04em;
 }
 
 .preview-placeholder.is-active {
@@ -371,7 +368,7 @@ footer {
 /* Imagen del preview */
 
 .preview-image-container {
-  background: #fff;
+  background: #ffffff;
 }
 
 .preview-image {
@@ -382,12 +379,12 @@ footer {
 
   object-fit: contain;
 
-  background: #fff;
+  background: #ffffff;
 }
 
 
 /* ========================================
-   ARCHIVO — ENTRADAS
+   ARCHIVO
 ======================================== */
 
 .archive-entry {
@@ -415,7 +412,7 @@ footer {
 
   grid-template-columns:
     minmax(0, 1fr)
-    minmax(260px, .55fr);
+    minmax(260px, 0.55fr);
 
   align-items: start;
 
@@ -454,9 +451,9 @@ footer {
       72px
     );
 
-  line-height: .92;
+  line-height: 0.92;
 
-  letter-spacing: -.05em;
+  letter-spacing: -0.05em;
 }
 
 .archive-entry-meta p {
@@ -480,12 +477,6 @@ footer {
 .graphic-heading {
   margin-bottom: 40px;
 }
-
-
-/*
-Tres mujeres arriba.
-Dos corazones abajo.
-*/
 
 .graphic-series {
   display: grid;
@@ -523,7 +514,7 @@ Dos corazones abajo.
 
   display: block;
 
-  background: #fff;
+  background: #ffffff;
 }
 
 
@@ -539,13 +530,15 @@ Dos corazones abajo.
     1fr;
 
   gap: 28px;
+
+  align-items: start;
 }
 
-.product-image {
-  display: flex;
 
-  align-items: center;
-  justify-content: center;
+/* Imagen real de TEE 01 */
+
+.product-image {
+  width: 100%;
 
   min-height: 55vh;
 
@@ -553,15 +546,36 @@ Dos corazones abajo.
     1px solid
     var(--text);
 
-  font-family:
-    ui-monospace,
-    SFMono-Regular,
-    Menlo,
-    Monaco,
-    Consolas,
-    monospace;
+  overflow: hidden;
 
-  font-size: 13px;
+  background: #000000;
+}
+
+
+/* Mockup */
+
+.product-photo {
+  aspect-ratio: 1 / 1;
+}
+
+.product-photo img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  background: #000000;
+}
+
+
+/* Información de producto */
+
+.product-info {
+  position: sticky;
+  top: 90px;
 }
 
 .product-info h3 {
@@ -572,9 +586,9 @@ Dos corazones abajo.
       62px
     );
 
-  line-height: .95;
+  line-height: 0.95;
 
-  letter-spacing: -.05em;
+  letter-spacing: -0.05em;
 
   margin:
     18px
@@ -640,7 +654,7 @@ Dos corazones abajo.
       58px
     );
 
-  letter-spacing: -.04em;
+  letter-spacing: -0.04em;
 }
 
 .project-link em {
@@ -674,9 +688,9 @@ Dos corazones abajo.
       76px
     );
 
-  line-height: .98;
+  line-height: 0.98;
 
-  letter-spacing: -.05em;
+  letter-spacing: -0.05em;
 }
 
 .info-copy p {
@@ -767,6 +781,9 @@ footer {
       );
   }
 
+
+  /* ÍNDICE */
+
   .project-row,
   .project-link {
     grid-template-columns:
@@ -780,7 +797,7 @@ footer {
   }
 
 
-  /* No hover preview en móvil */
+  /* Desactivar previews flotantes */
 
   .preview-panel {
     display: none;
@@ -832,8 +849,19 @@ footer {
   }
 
   .product-image {
-    min-height: 48vh;
+    min-height: auto;
   }
+
+  .product-photo {
+    aspect-ratio: 1 / 1;
+  }
+
+  .product-info {
+    position: static;
+  }
+
+
+  /* Info */
 
   .info-copy {
     font-size:
@@ -866,6 +894,9 @@ footer {
     font-size: 28px;
   }
 
+
+  /* Gráfica */
+
   .graphic-series {
     grid-template-columns:
       1fr;
@@ -876,6 +907,17 @@ footer {
   .graphic-heart {
     grid-column:
       1;
+  }
+
+
+  /* Merch */
+
+  .product {
+    gap: 20px;
+  }
+
+  .product-photo {
+    aspect-ratio: 1 / 1;
   }
 
 }
