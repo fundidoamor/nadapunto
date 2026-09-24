@@ -53,3 +53,15 @@ footer { display:flex; justify-content:space-between; padding:24px; font-family:
   .media-placeholder,.product-image { min-height:48vh; }
   .info-copy { font-size:clamp(36px,11vw,68px); }
 }
+/* VIDEO — TRAZO TRAS TRAZO */
+
+.archive-media {
+  width: 100%;
+  overflow: hidden;
+}
+
+.archive-video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
