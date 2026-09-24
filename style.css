@@ -65,3 +65,64 @@ footer { display:flex; justify-content:space-between; padding:24px; font-family:
   height: auto;
   display: block;
 }
+/* ========================================
+   TRAZO TRAS TRAZO — VIDEO
+======================================== */
+
+
+/* VIDEO DENTRO DE /ARCHIVO */
+
+.archive-media {
+  width: 100%;
+  overflow: hidden;
+}
+
+.archive-video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* ========================================
+   PREVIEW DEL ÍNDICE
+======================================== */
+
+.preview-panel {
+  width: 340px;
+  height: 340px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+
+/* Cada preview ocupa exactamente
+   el mismo cuadrado */
+
+.preview-placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Preview que contiene video */
+
+.preview-media {
+  padding: 0;
+  background: #111;
+  overflow: hidden;
+}
+
+
+/* El Reel se RECORTA al cuadrado */
+
+.preview-video {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  object-fit: cover;
+
+  /* Centramos el encuadre */
+  object-position: center;
+}
