@@ -1,33 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <meta
     name="description"
-    content="Nada Punto Com — archivo, merch y proyectos."
+    content="Nada Punto Com — archivo, gráfica, objetos, música y proyectos."
   />
+
   <title>Nada Punto Com</title>
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
+
 <body>
 
-  <header class="site-header">
-    <a class="brand" href="#top">NADA PUNTO COM</a>
+  <!-- ========================================
+       HEADER
+  ========================================= -->
 
-    <nav class="main-nav" aria-label="Navegación principal">
+  <header class="site-header">
+
+    <a class="brand" href="#top">
+      NADA PUNTO COM
+    </a>
+
+    <nav
+      class="main-nav"
+      aria-label="Navegación principal"
+    >
+
       <a href="#archivo">/archivo</a>
       <a href="#merch">/merch</a>
       <a href="#proyectos">/proyectos</a>
       <a href="#info">/info</a>
+
     </nav>
+
   </header>
+
 
 
   <main id="top">
 
-    <!-- HERO -->
+
+    <!-- ========================================
+         HERO
+    ========================================= -->
+
     <section class="hero">
 
       <div class="hero-copy">
@@ -44,19 +67,27 @@
 
       </div>
 
+
       <div class="hero-meta">
+
         <span>MX</span>
         <span>2026</span>
+
       </div>
 
     </section>
 
 
-    <!-- ÍNDICE -->
+
+    <!-- ========================================
+         ÍNDICE
+    ========================================= -->
+
     <section
       class="index-section"
       aria-labelledby="indice-title"
     >
+
 
       <div class="section-heading">
 
@@ -71,12 +102,15 @@
       </div>
 
 
+
       <div class="project-list">
 
+
         <!-- 001 -->
+
         <a
           class="project-row"
-          href="#archivo"
+          href="#trazo-tras-trazo"
           data-preview="preview-1"
         >
 
@@ -89,16 +123,18 @@
           </span>
 
           <span class="project-type">
-            archivo
+            proceso / video
           </span>
 
         </a>
 
 
+
         <!-- 002 -->
+
         <a
           class="project-row"
-          href="#proyectos"
+          href="#grafica-01"
           data-preview="preview-2"
         >
 
@@ -107,17 +143,19 @@
           </span>
 
           <span class="project-title">
-            AMOR FUNDIDO
+            GRÁFICA 01
           </span>
 
           <span class="project-type">
-            proyecto
+            ilustración
           </span>
 
         </a>
 
 
+
         <!-- 003 -->
+
         <a
           class="project-row"
           href="#merch"
@@ -139,7 +177,9 @@
         </a>
 
 
+
         <!-- 004 -->
+
         <a
           class="project-row"
           href="#proyectos"
@@ -160,16 +200,23 @@
 
         </a>
 
+
       </div>
 
 
-      <!-- PREVIEWS -->
+
+      <!-- ========================================
+           PREVIEWS
+      ========================================= -->
+
       <div
         class="preview-panel"
         aria-hidden="true"
       >
 
-        <!-- PREVIEW 001 -->
+
+        <!-- 001 — VIDEO -->
+
         <div
           class="preview-placeholder preview-media"
           id="preview-1"
@@ -188,16 +235,26 @@
         </div>
 
 
-        <!-- PREVIEW 002 -->
+
+        <!-- 002 — GRÁFICA -->
+
         <div
-          class="preview-placeholder"
+          class="preview-placeholder preview-media preview-image-container"
           id="preview-2"
         >
-          AMOR FUNDIDO
+
+          <img
+            class="preview-image"
+            src="grafica-01-mujer-tigre.jpeg"
+            alt=""
+          />
+
         </div>
 
 
-        <!-- PREVIEW 003 -->
+
+        <!-- 003 -->
+
         <div
           class="preview-placeholder"
           id="preview-3"
@@ -206,7 +263,9 @@
         </div>
 
 
-        <!-- PREVIEW 004 -->
+
+        <!-- 004 -->
+
         <div
           class="preview-placeholder"
           id="preview-4"
@@ -214,16 +273,22 @@
           ARCHIVO 36
         </div>
 
+
       </div>
 
     </section>
 
 
-    <!-- ARCHIVO -->
+
+    <!-- ========================================
+         ARCHIVO
+    ========================================= -->
+
     <section
       id="archivo"
       class="content-section"
     >
+
 
       <div class="section-heading">
 
@@ -238,82 +303,183 @@
       </div>
 
 
-      <div class="grid">
 
-        <!-- 001 — TRAZO TRAS TRAZO -->
-        <article class="card">
+      <!-- ========================================
+           001 — TRAZO TRAS TRAZO
+      ========================================= -->
 
-          <div class="archive-media">
-
-            <video
-              class="archive-video"
-              src="trazo-tras-trazo-01.mp4"
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="metadata"
-            >
-              Tu navegador no puede reproducir este video.
-            </video>
-
-          </div>
+      <article
+        id="trazo-tras-trazo"
+        class="archive-entry archive-entry-video"
+      >
 
 
-          <div class="card-meta">
+        <div class="archive-media">
 
-            <span>
-              001
-            </span>
+          <video
+            class="archive-video"
+            src="trazo-tras-trazo-01.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+          >
+            Tu navegador no puede reproducir este video.
+          </video>
 
-            <h3>
-              TRAZO TRAS TRAZO 01
-            </h3>
-
-            <p>
-              Proceso de dibujo.
-            </p>
-
-          </div>
-
-        </article>
+        </div>
 
 
-        <!-- 002 -->
-        <article class="card">
 
-          <div class="media-placeholder">
-            IMAGEN / VIDEO
-          </div>
+        <div class="archive-entry-meta">
 
-          <div class="card-meta">
+          <span class="archive-number">
+            001
+          </span>
 
-            <span>
-              002
-            </span>
+          <h3>
+            TRAZO TRAS TRAZO 01
+          </h3>
 
-            <h3>
-              ARCHIVO DE DIBUJOS
-            </h3>
+          <p>
+            Proceso de dibujo.
+          </p>
 
-            <p>
-              Bocetos, pruebas y piezas.
-            </p>
+          <span class="archive-detail">
+            VIDEO / DIBUJO / 2026
+          </span>
 
-          </div>
+        </div>
 
-        </article>
 
-      </div>
+      </article>
+
+
+
+      <!-- ========================================
+           002 — GRÁFICA 01
+      ========================================= -->
+
+      <article
+        id="grafica-01"
+        class="archive-entry graphic-entry"
+      >
+
+
+        <div class="archive-entry-meta graphic-heading">
+
+          <span class="archive-number">
+            002
+          </span>
+
+          <h3>
+            GRÁFICA 01
+          </h3>
+
+          <p>
+            Ilustración / flash / gráfica.
+          </p>
+
+          <span class="archive-detail">
+            2025—2026
+          </span>
+
+        </div>
+
+
+
+        <div class="graphic-series">
+
+
+          <!-- MUJER + MANDRIL -->
+
+          <figure class="graphic-item graphic-woman">
+
+            <img
+              src="grafica-01-mujer-mandril.jpeg"
+              alt="Ilustración de mujer con mandril"
+              loading="lazy"
+            />
+
+          </figure>
+
+
+
+          <!-- MUJER + TIBURÓN -->
+
+          <figure class="graphic-item graphic-woman">
+
+            <img
+              src="grafica-01-mujer-tiburon.jpeg"
+              alt="Ilustración de mujer con tiburón"
+              loading="lazy"
+            />
+
+          </figure>
+
+
+
+          <!-- MUJER + TIGRE -->
+
+          <figure class="graphic-item graphic-woman">
+
+            <img
+              src="grafica-01-mujer-tigre.jpeg"
+              alt="Ilustración de mujer con tigre"
+              loading="lazy"
+            />
+
+          </figure>
+
+
+
+          <!-- TIGRE / CORAZÓN -->
+
+          <figure class="graphic-item graphic-heart">
+
+            <img
+              src="grafica-01-tigre-corazon.jpeg"
+              alt="Ilustración de tigre dentro de corazón"
+              loading="lazy"
+            />
+
+          </figure>
+
+
+
+          <!-- DRAGÓN / CORAZÓN -->
+
+          <figure class="graphic-item graphic-heart">
+
+            <img
+              src="grafica-01-dragon-corazon.jpeg"
+              alt="Ilustración de dragón dentro de corazón"
+              loading="lazy"
+            />
+
+          </figure>
+
+
+        </div>
+
+
+      </article>
+
 
     </section>
 
 
-    <!-- MERCH -->
+
+    <!-- ========================================
+         MERCH
+    ========================================= -->
+
     <section
       id="merch"
       class="content-section"
     >
+
 
       <div class="section-heading">
 
@@ -326,6 +492,7 @@
         </span>
 
       </div>
+
 
 
       <div class="product">
@@ -366,14 +533,20 @@
 
       </div>
 
+
     </section>
 
 
-    <!-- PROYECTOS -->
+
+    <!-- ========================================
+         PROYECTOS
+    ========================================= -->
+
     <section
       id="proyectos"
       class="content-section"
     >
+
 
       <div class="section-heading">
 
@@ -388,7 +561,9 @@
       </div>
 
 
+
       <div class="project-links">
+
 
         <a
           href="#"
@@ -408,6 +583,7 @@
           </em>
 
         </a>
+
 
 
         <a
@@ -430,6 +606,7 @@
         </a>
 
 
+
         <a
           href="#"
           class="project-link"
@@ -449,16 +626,23 @@
 
         </a>
 
+
       </div>
+
 
     </section>
 
 
-    <!-- INFO -->
+
+    <!-- ========================================
+         INFO
+    ========================================= -->
+
     <section
       id="info"
       class="content-section info-section"
     >
+
 
       <div class="section-heading">
 
@@ -471,6 +655,7 @@
         </span>
 
       </div>
+
 
 
       <div class="info-copy">
@@ -505,10 +690,17 @@
 
       </div>
 
+
     </section>
+
 
   </main>
 
+
+
+  <!-- ========================================
+       FOOTER
+  ========================================= -->
 
   <footer>
 
@@ -523,7 +715,9 @@
   </footer>
 
 
+
   <script src="script.js"></script>
 
 </body>
+
 </html>
