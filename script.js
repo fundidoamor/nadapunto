@@ -2,153 +2,225 @@
    PREVIEWS DEL ÍNDICE
 ======================================== */
 
-const rows = document.querySelectorAll('.project-row');
-const previewPanel = document.querySelector('.preview-panel');
-const previews = document.querySelectorAll('.preview-placeholder');
+const projectRows =
+  document.querySelectorAll(
+    '.project-row[data-preview]'
+  );
 
-rows.forEach((row) => {
+const previewPanel =
+  document.querySelector(
+    '.preview-panel'
+  );
 
-  row.addEventListener('mouseenter', () => {
-
-    const previewId = row.dataset.preview;
-
-    previews.forEach((preview) => {
-
-      preview.classList.toggle(
-        'is-active',
-        preview.id === previewId
-      );
-
-    });
-
-    previewPanel.classList.add('is-visible');
-
-  });
+const previews =
+  document.querySelectorAll(
+    '.preview-placeholder'
+  );
 
 
-  row.addEventListener('mouseleave', () => {
+if (
+  previewPanel &&
+  projectRows.length > 0
+) {
 
-    previewPanel.classList.remove('is-visible');
+  projectRows.forEach((row) => {
 
-  });
+    row.addEventListener(
+      'mouseenter',
+      () => {
 
-});
-
-
-/* ========================================
-   PLAYER — 1992
-======================================== */
-
-const playButtons = document.querySelectorAll('.track-play');
-const audioTracks = document.querySelectorAll('.track-row audio');
+        const previewId =
+          row.dataset.preview;
 
 
-function resetTrackUI() {
+        previews.forEach(
+          (preview) => {
 
-  playButtons.forEach((button) => {
-    button.textContent = 'PLAY';
-  });
+            const isActive =
+              preview.id === previewId;
 
-  document
-    .querySelectorAll('.track-row')
-    .forEach((row) => {
-      row.classList.remove('is-playing');
-    });
+            preview.classList.toggle(
+              'is-active',
+              isActive
+            );
 
-}
-
-
-function stopOtherTracks(activeAudio) {
-
-  audioTracks.forEach((audio) => {
-
-    if (audio !== activeAudio) {
-
-      audio.pause();
-      audio.currentTime = 0;
-
-    }
-
-  });
-
-}
-
-
-playButtons.forEach((button) => {
-
-  button.addEventListener('click', () => {
-
-    const audioId = button.dataset.audio;
-    const audio = document.getElementById(audioId);
-
-    if (!audio) {
-      return;
-    }
-
-
-    /* SI YA ESTÁ SONANDO, PAUSAR */
-
-    if (!audio.paused) {
-
-      audio.pause();
-
-      button.textContent = 'PLAY';
-
-      button
-        .closest('.track-row')
-        .classList.remove('is-playing');
-
-      return;
-
-    }
-
-
-    /* DETENER LOS DEMÁS */
-
-    stopOtherTracks(audio);
-
-    resetTrackUI();
-
-
-    /* REPRODUCIR */
-
-    audio
-      .play()
-      .then(() => {
-
-        button.textContent = 'PAUSE';
-
-        button
-          .closest('.track-row')
-          .classList.add('is-playing');
-
-      })
-      .catch((error) => {
-
-        console.error(
-          'No se pudo reproducir el audio:',
-          error
+          }
         );
 
-      });
+
+        previewPanel.classList.add(
+          'is-visible'
+        );
+
+      }
+    );
+
+
+    row.addEventListener(
+      'mouseleave',
+      () => {
+
+        previewPanel.classList.remove(
+          'is-visible'
+        );
+
+      }
+    );
 
   });
 
-});
+}
 
 
 /* ========================================
-   CUANDO TERMINA UNA CANCIÓN
+   PLAYER DE MÚSICA
 ======================================== */
 
-audioTracks.forEach((audio) => {
+const playButtons =
+  document.querySelectorAll(
+    '.track-play'
+  );
 
-  audio.addEventListener('ended', () => {
+const audioTracks =
+  document.querySelectorAll(
+    '.track-row audio'
+  );
 
-    resetTrackUI();
 
-    audio.currentTime = 0;
+function resetPlayers() {
 
-  });
+  playButtons.forEach(
+    (button) => {
 
-});
+      button.textContent =
+        'PLAY';
+
+    }
+  );
+
+}
+
+
+function stopOtherTracks(
+  activeAudio
+) {
+
+  audioTracks.forEach(
+    (audio) => {
+
+      if (
+        audio !== activeAudio
+      ) {
+
+        audio.pause();
+
+        audio.currentTime = 0;
+
+      }
+
+    }
+  );
+
+}
+
+
+playButtons.forEach(
+  (button) => {
+
+    button.addEventListener(
+      'click',
+      () => {
+
+        const audioId =
+          button.dataset.audio;
+
+        const selectedAudio =
+          document.getElementById(
+            audioId
+          );
+
+
+        if (!selectedAudio) {
+          return;
+        }
+
+
+        /* ========================================
+           SI YA ESTÁ SONANDO
+        ========================================= */
+
+        if (
+          !selectedAudio.paused
+        ) {
+
+          selectedAudio.pause();
+
+          button.textContent =
+            'PLAY';
+
+          return;
+
+        }
+
+
+        /* ========================================
+           DETENER LAS DEMÁS
+        ========================================= */
+
+        stopOtherTracks(
+          selectedAudio
+        );
+
+        resetPlayers();
+
+
+        /* ========================================
+           REPRODUCIR
+        ========================================= */
+
+        selectedAudio
+          .play()
+          .then(() => {
+
+            button.textContent =
+              'PAUSE';
+
+          })
+          .catch(
+            (error) => {
+
+              console.error(
+                'No se pudo reproducir el audio:',
+                error
+              );
+
+            }
+          );
+
+      }
+    );
+
+  }
+);
+
+
+/* ========================================
+   CUANDO TERMINA UN TRACK
+======================================== */
+
+audioTracks.forEach(
+  (audio) => {
+
+    audio.addEventListener(
+      'ended',
+      () => {
+
+        audio.currentTime = 0;
+
+        resetPlayers();
+
+      }
+    );
+
+  }
+);
